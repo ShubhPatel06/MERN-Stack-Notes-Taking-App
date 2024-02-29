@@ -7,7 +7,7 @@ const Welcome = () => {
     timeStyle: "long",
   }).format(date);
 
-  return (
+  const content = (
     <section className="welcome">
       <p>{today}</p>
 
@@ -18,9 +18,19 @@ const Welcome = () => {
       </p>
 
       <p>
+        <Link to="/dash/notes/new">Add New Note</Link>
+      </p>
+
+      <p>
         <Link to="/dash/users">View User Settings</Link>
+      </p>
+
+      <p>
+        <Link to="/dash/users/new">Add New User</Link>
       </p>
     </section>
   );
+
+  return content;
 };
 export default Welcome;
